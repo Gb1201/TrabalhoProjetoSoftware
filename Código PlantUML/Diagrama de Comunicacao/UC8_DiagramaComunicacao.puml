@@ -1,0 +1,34 @@
+@startuml
+
+title Diagrama de Comunicação - UC-08 Registrar Palpite
+
+package "Participante" {
+    object Participante
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Participante --> Sistema : 1: Selecionar jogo
+
+Sistema --> BancoDeDados : 1.1: Consultar jogo
+
+BancoDeDados --> Sistema : 1.2: Retornar dados do jogo
+
+Sistema --> Participante : 1.3: Exibir formulário
+
+Participante --> Sistema : 2: Informar palpite
+
+Sistema --> BancoDeDados : 2.1: Verificar palpite existente
+
+BancoDeDados --> Sistema : 2.2: Resultado da consulta
+
+Sistema --> BancoDeDados : 2.3: Salvar palpite
+
+BancoDeDados --> Sistema : 2.4: Confirmar gravação
+
+Sistema --> Participante : 2.5: Exibir confirmação
+
+@enduml

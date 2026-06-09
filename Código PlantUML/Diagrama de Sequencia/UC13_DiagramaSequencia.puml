@@ -1,0 +1,28 @@
+@startuml
+
+title UC-13 - Consultar Ranking
+
+actor "Participante" as P
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+P -> S : Solicita ranking
+activate S
+
+S -> BD : Consultar classificação
+activate BD
+
+BD --> S : Lista ordenada
+deactivate BD
+
+S ->> BD : Buscar estatísticas dos participantes
+activate BD
+
+BD --> S : Estatísticas
+deactivate BD
+
+S --> P : Exibe ranking atualizado
+
+deactivate S
+
+@enduml

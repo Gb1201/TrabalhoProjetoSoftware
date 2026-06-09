@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+title Diagrama de Estados - Jogo
+
+[*] --> Agendado : Administrador cadastra jogo
+
+Agendado --> RecebendoPalpites : Jogo disponível
+
+RecebendoPalpites --> EmAndamento : Horário da partida
+
+RecebendoPalpites --> Cancelado : Administrador cancela
+
+EmAndamento --> Encerrado : Partida finalizada
+
+Encerrado --> ResultadoRegistrado : Administrador registra resultado
+
+ResultadoRegistrado --> RankingAtualizado : Sistema recalcula ranking
+
+RankingAtualizado --> NotificacoesEnviadas : Sistema envia notificações
+
+NotificacoesEnviadas --> [*]
+
+Cancelado --> [*]
+
+@enduml

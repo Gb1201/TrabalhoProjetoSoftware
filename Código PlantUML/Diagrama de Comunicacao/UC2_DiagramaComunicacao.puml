@@ -1,0 +1,24 @@
+@startuml
+
+title Diagrama de Comunicação - UC-02 Realizar Login
+
+package "Usuário" {
+    object Usuario
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Usuario --> Sistema : 1: Informar e-mail e senha
+
+Sistema --> BancoDeDados : 1.1: Buscar usuário por e-mail
+
+BancoDeDados --> Sistema : 1.2: Retornar dados do usuário
+
+Sistema --> Sistema : 1.3: Validar credenciais
+
+Sistema --> Usuario : 1.4: Login realizado\nou mensagem de erro
+
+@enduml

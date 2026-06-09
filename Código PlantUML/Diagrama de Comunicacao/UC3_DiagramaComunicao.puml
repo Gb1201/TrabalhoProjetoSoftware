@@ -1,0 +1,32 @@
+@startuml
+
+title Diagrama de Comunicação - UC-03 Gerenciar Participantes
+
+package "Administrador" {
+    object Administrador
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Administrador --> Sistema : 1: Solicitar lista de participantes
+
+Sistema --> BancoDeDados : 1.1: Consultar participantes
+
+BancoDeDados --> Sistema : 1.2: Retornar participantes
+
+Sistema --> Administrador : 1.3: Exibir participantes
+
+Administrador --> Sistema : 2: Selecionar participante
+
+Administrador --> Sistema : 3: Editar ou remover participante
+
+Sistema --> BancoDeDados : 3.1: Atualizar dados
+
+BancoDeDados --> Sistema : 3.2: Confirmar operação
+
+Sistema --> Administrador : 3.3: Exibir confirmação
+
+@enduml

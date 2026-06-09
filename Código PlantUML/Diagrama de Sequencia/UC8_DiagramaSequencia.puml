@@ -1,0 +1,65 @@
+@startuml
+
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+title UC-08 - Registrar Palpite
+
+actor "Participante" as P
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+P -> S : Realiza login (UC-02)
+activate S
+
+S --> P : Exibe jogos disponíveis
+
+P -> S : Seleciona um jogo
+
+S -> BD : Consultar dados do jogo
+activate BD
+
+BD --> S : Retorna dados do jogo
+
+deactivate BD
+
+alt Partida já iniciada ou encerrada
+
+    S --> P : Exibe mensagem\n"Prazo para palpite encerrado"
+
+else Partida ainda não iniciada
+
+    S --> P : Exibe formulário de palpite
+
+    P -> S : Informa gols do Flamengo\ne gols do adversário
+
+    S -> BD : Consultar palpite do participante
+    activate BD
+
+    BD --> S : Retorna resultado da consulta
+
+    deactivate BD
+
+    alt Palpite já cadastrado
+
+        S --> P : Exibe mensagem\n"Já existe um palpite para este jogo"
+        S --> P : Orienta a utilizar UC-09\nAlterar Palpite
+
+    else Nenhum palpite encontrado
+
+        S -> BD : Salvar palpite
+        activate BD
+
+        BD --> S : Confirma gravação
+
+        deactivate BD
+
+        S --> P : Exibe mensagem\n"Palpite registrado com sucesso"
+
+    end
+
+end
+
+deactivate S
+
+@enduml

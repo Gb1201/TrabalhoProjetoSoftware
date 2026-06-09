@@ -1,0 +1,166 @@
+@startuml
+
+title Diagrama de Sequência Geral - Sistema FlaBolão
+
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+actor "Participante" as P
+actor "Administrador" as A
+
+participant "Sistema" as S
+database "Banco de Dados" as BD
+participant "Serviço de Notificação" as N
+
+== Cadastro ==
+
+P -> S : Solicita cadastro
+activate S
+
+S -> BD : Verificar e-mail
+activate BD
+
+BD --> S : Resultado da consulta
+deactivate BD
+
+S -> BD : Salvar participante
+activate BD
+
+BD --> S : Cadastro realizado
+deactivate BD
+
+S --> P : Confirma cadastro
+
+deactivate S
+
+== Login ==
+
+P -> S : Informa credenciais
+activate S
+
+S -> BD : Validar usuário
+activate BD
+
+BD --> S : Dados do usuário
+deactivate BD
+
+S --> P : Login realizado
+
+deactivate S
+
+== Cadastro de Jogo ==
+
+A -> S : Cadastrar jogo
+activate S
+
+S -> BD : Salvar jogo
+activate BD
+
+BD --> S : Confirma gravação
+deactivate BD
+
+S --> A : Jogo cadastrado
+
+deactivate S
+
+== Registro de Palpite ==
+
+P -> S : Registrar palpite
+activate S
+
+S -> BD : Consultar jogo
+activate BD
+
+BD --> S : Dados do jogo
+deactivate BD
+
+alt Jogo disponível
+
+    S -> BD : Salvar palpite
+    activate BD
+
+    BD --> S : Confirma gravação
+
+    deactivate BD
+
+    S --> P : Palpite registrado
+
+else Prazo encerrado
+
+    S --> P : Não é possível registrar
+
+end
+
+deactivate S
+
+== Resultado da Partida ==
+
+A -> S : Informar resultado oficial
+activate S
+
+S -> BD : Salvar resultado
+activate BD
+
+BD --> S : Resultado registrado
+deactivate BD
+
+S -> BD : Buscar palpites
+activate BD
+
+BD --> S : Lista de palpites
+deactivate BD
+
+loop Para cada palpite
+
+    S -> S : Calcular pontuação
+
+    S -> BD : Atualizar pontuação
+    activate BD
+
+    BD --> S : Confirma atualização
+
+    deactivate BD
+
+end
+
+S -> BD : Atualizar ranking
+activate BD
+
+BD --> S : Ranking atualizado
+
+deactivate BD
+
+== Notificações ==
+
+loop Para cada participante
+
+    S ->> N : Gerar notificação
+    activate N
+
+    N ->> P : Informar pontuação
+
+    deactivate N
+
+end
+
+S --> A : Processo concluído
+
+deactivate S
+
+== Consulta de Ranking ==
+
+P -> S : Consultar ranking
+activate S
+
+S -> BD : Buscar ranking
+activate BD
+
+BD --> S : Ranking atualizado
+
+deactivate BD
+
+S --> P : Exibir ranking
+
+deactivate S
+
+@enduml

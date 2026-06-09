@@ -1,0 +1,28 @@
+@startuml
+
+title Diagrama de Comunicação - UC-04 Cadastrar Jogo
+
+package "Administrador" {
+    object Administrador
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Administrador --> Sistema : 1: Solicitar cadastro de jogo
+
+Sistema --> Administrador : 1.1: Exibir formulário
+
+Administrador --> Sistema : 2: Informar dados do jogo
+
+Sistema --> Sistema : 2.1: Validar dados
+
+Sistema --> BancoDeDados : 2.2: Salvar jogo
+
+BancoDeDados --> Sistema : 2.3: Confirmar gravação
+
+Sistema --> Administrador : 2.4: Exibir confirmação
+
+@enduml

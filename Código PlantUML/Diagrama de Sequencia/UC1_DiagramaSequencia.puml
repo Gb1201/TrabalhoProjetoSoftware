@@ -1,0 +1,54 @@
+@startuml
+
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+title UC-01 - Cadastrar Participante
+
+actor "Participante" as P
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+P -> S : Acessa tela de cadastro
+activate S
+S --> P : Exibe formulário de cadastro
+deactivate S
+
+P -> S : Informa nome, e-mail e senha
+activate S
+
+S -> S : Validar campos obrigatórios
+
+alt Dados inválidos
+
+    S --> P : Exibe mensagem de erro
+
+else Dados válidos
+
+    S -> BD : Consultar e-mail
+    activate BD
+
+    BD --> S : Retorna resultado
+    deactivate BD
+
+    alt E-mail já cadastrado
+
+        S --> P : Exibe mensagem\n"E-mail já cadastrado"
+
+    else E-mail disponível
+
+        S -> BD : Salvar participante
+        activate BD
+
+        BD --> S : Confirma gravação
+        deactivate BD
+
+        S --> P : Exibe mensagem\n"Cadastro realizado com sucesso"
+
+    end
+
+end
+
+deactivate S
+
+@enduml

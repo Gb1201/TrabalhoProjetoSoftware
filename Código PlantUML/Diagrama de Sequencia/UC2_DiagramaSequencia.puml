@@ -1,0 +1,33 @@
+@startuml
+
+title UC-02 - Realizar Login
+
+actor "Usuário" as U
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+U -> S : Informa e-mail e senha
+activate S
+
+S -> BD : Buscar usuário por e-mail
+activate BD
+
+BD --> S : Dados do usuário
+deactivate BD
+
+S -> S : Validar credenciais
+
+alt Credenciais inválidas
+    S --> U : Exibe mensagem de erro
+else Credenciais válidas
+    S ->> BD : Registrar último acesso
+    activate BD
+    BD --> S : Confirma atualização
+    deactivate BD
+
+    S --> U : Login realizado com sucesso
+end
+
+deactivate S
+
+@enduml

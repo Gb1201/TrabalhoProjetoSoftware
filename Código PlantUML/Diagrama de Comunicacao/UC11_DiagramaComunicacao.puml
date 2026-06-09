@@ -1,0 +1,38 @@
+@startuml
+
+title Diagrama de Comunicação - UC-11 Registrar Resultado da Partida
+
+package "Administrador" {
+    object Administrador
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+package "Participantes" {
+    object Participante
+}
+
+Administrador --> Sistema : 1: Informar resultado oficial
+
+Sistema --> BancoDeDados : 1.1: Salvar resultado
+
+BancoDeDados --> Sistema : 1.2: Confirmar gravação
+
+Sistema --> BancoDeDados : 1.3: Buscar palpites
+
+BancoDeDados --> Sistema : 1.4: Retornar palpites
+
+Sistema --> Sistema : 1.5: Calcular pontuações
+
+Sistema --> BancoDeDados : 1.6: Atualizar ranking
+
+BancoDeDados --> Sistema : 1.7: Ranking atualizado
+
+Sistema --> Participante : 1.8: Enviar notificação
+
+Sistema --> Administrador : 1.9: Exibir confirmação
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+title Diagrama de Comunicação - UC-13 Consultar Ranking
+
+package "Participante" {
+    object Participante
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Participante --> Sistema : 1: Solicitar ranking
+
+Sistema --> BancoDeDados : 1.1: Consultar ranking
+
+BancoDeDados --> Sistema : 1.2: Retornar classificação
+
+Sistema --> BancoDeDados : 1.3: Buscar estatísticas
+
+BancoDeDados --> Sistema : 1.4: Retornar estatísticas
+
+Sistema --> Participante : 1.5: Exibir ranking atualizado
+
+@enduml

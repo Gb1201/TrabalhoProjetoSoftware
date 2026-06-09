@@ -1,0 +1,30 @@
+@startuml
+
+title Diagrama de Comunicação - UC-14 Visualizar Notificações
+
+package "Participante" {
+    object Participante
+}
+
+package "Sistema FlaBolão" {
+    object Sistema
+    object BancoDeDados
+}
+
+Participante --> Sistema : 1: Solicitar notificações
+
+Sistema --> BancoDeDados : 1.1: Consultar notificações
+
+BancoDeDados --> Sistema : 1.2: Retornar notificações
+
+Sistema --> Participante : 1.3: Exibir notificações
+
+Participante --> Sistema : 2: Marcar notificação como lida
+
+Sistema --> BancoDeDados : 2.1: Atualizar status
+
+BancoDeDados --> Sistema : 2.2: Confirmar atualização
+
+Sistema --> Participante : 2.3: Atualização concluída
+
+@enduml

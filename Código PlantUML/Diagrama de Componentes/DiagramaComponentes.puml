@@ -1,0 +1,174 @@
+@startuml
+
+title Diagrama de Componentes - Sistema FlaBolão
+
+skinparam componentStyle uml2
+
+
+
+package "Frontend (React)" {
+
+  component [Tela de Cadastro\ne Login] as TelaAuth
+  component [Tela de Jogos\ne Palpites] as TelaPalpite
+  component [Tela de Ranking] as TelaRanking
+  component [Tela de Notificações] as TelaNotif
+  component [Painel do\nAdministrador] as TelaAdmin
+
+}
+
+
+package "Backend (Spring Boot)" {
+
+  component [AuthController] as AuthCtrl
+  component [ParticipanteController] as PartCtrl
+  component [JogoController] as JogoCtrl
+  component [PalpiteController] as PalpCtrl
+  component [ResultadoController] as ResultCtrl
+  component [RankingController] as RankCtrl
+  component [NotificacaoController] as NotifCtrl
+
+  component [AuthService] as AuthSvc
+  component [ParticipanteService] as PartSvc
+  component [JogoService] as JogoSvc
+  component [PalpiteService] as PalpSvc
+  component [ResultadoService] as ResultSvc
+  component [RankingService] as RankSvc
+  component [NotificacaoService] as NotifSvc
+
+  component [ParticipanteRepository] as PartRepo
+  component [JogoRepository] as JogoRepo
+  component [PalpiteRepository] as PalpRepo
+  component [RankingRepository] as RankRepo
+  component [NotificacaoRepository] as NotifRepo
+
+}
+
+
+
+database "Banco de Dados\n(PostgreSQL)" {
+
+  component [participantes] as TbPart
+  component [jogos] as TbJogo
+  component [palpites] as TbPalp
+  component [ranking] as TbRank
+  component [notificacoes] as TbNotif
+
+}
+
+
+
+interface "POST /auth/cadastro\nPOST /auth/login" as IAuth
+
+interface "GET /jogos\nGET /jogos/{id}" as IJogos
+
+interface "POST /palpites\nPUT /palpites/{id}" as IPalpites
+
+interface "GET /participantes\nPUT /participantes/{id}\nDELETE /participantes/{id}" as IParticipantes
+
+interface "POST /jogos\nPUT /jogos/{id}\nDELETE /jogos/{id}" as IAdminJogos
+
+interface "POST /resultado/{jogoId}" as IResultado
+
+interface "GET /ranking" as IRanking
+
+interface "GET /notificacoes" as INotif
+
+
+
+interface "JPA / JDBC" as IJPA
+
+
+
+TelaAuth ..> IAuth
+
+TelaPalpite ..> IJogos
+TelaPalpite ..> IPalpites
+
+TelaRanking ..> IRanking
+
+TelaNotif ..> INotif
+
+TelaAdmin ..> IAdminJogos
+TelaAdmin ..> IResultado
+TelaAdmin ..> IParticipantes
+
+
+
+IAuth --> AuthCtrl
+
+IJogos --> JogoCtrl
+
+IPalpites --> PalpCtrl
+
+IParticipantes --> PartCtrl
+
+IAdminJogos --> JogoCtrl
+
+IResultado --> ResultCtrl
+
+IRanking --> RankCtrl
+
+INotif --> NotifCtrl
+
+
+AuthCtrl --> AuthSvc
+
+PartCtrl --> PartSvc
+
+JogoCtrl --> JogoSvc
+
+PalpCtrl --> PalpSvc
+
+ResultCtrl --> ResultSvc
+
+RankCtrl --> RankSvc
+
+NotifCtrl --> NotifSvc
+
+
+
+ResultSvc --> PalpSvc
+ResultSvc --> RankSvc
+ResultSvc --> NotifSvc
+
+
+
+AuthSvc --> PartRepo
+
+PartSvc --> PartRepo
+
+JogoSvc --> JogoRepo
+
+PalpSvc --> PalpRepo
+
+RankSvc --> RankRepo
+
+NotifSvc --> NotifRepo
+
+ResultSvc --> JogoRepo
+
+
+
+PartRepo ..> IJPA
+
+JogoRepo ..> IJPA
+
+PalpRepo ..> IJPA
+
+RankRepo ..> IJPA
+
+NotifRepo ..> IJPA
+
+
+
+IJPA --> TbPart
+
+IJPA --> TbJogo
+
+IJPA --> TbPalp
+
+IJPA --> TbRank
+
+IJPA --> TbNotif
+
+@enduml

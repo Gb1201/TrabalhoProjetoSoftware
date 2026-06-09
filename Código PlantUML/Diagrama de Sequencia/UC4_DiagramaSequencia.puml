@@ -1,0 +1,34 @@
+@startuml
+
+title UC-04 - Cadastrar Jogo
+
+actor "Administrador" as A
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+A -> S : Solicita cadastro de jogo
+activate S
+
+S --> A : Exibe formulário
+
+A -> S : Informa dados do jogo
+
+S -> S : Validar informações
+
+alt Dados inválidos
+    S --> A : Exibe erro
+else Dados válidos
+
+    S -> BD : Salvar jogo
+    activate BD
+
+    BD --> S : Confirma gravação
+    deactivate BD
+
+    S --> A : Jogo cadastrado com sucesso
+
+end
+
+deactivate S
+
+@enduml

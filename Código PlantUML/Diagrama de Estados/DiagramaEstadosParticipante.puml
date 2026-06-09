@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+title Diagrama de Estados - Participante
+
+
+
+[*] --> Cadastrado : Cadastro realizado
+
+Cadastrado --> Ativo : Login efetuado
+
+Ativo --> Bloqueado : Administrador bloqueia
+
+Bloqueado --> Ativo : Administrador desbloqueia
+
+Ativo --> Inativo : Conta desativada
+
+Inativo --> Ativo : Reativação
+
+Inativo --> Excluido : Remoção da conta
+
+Excluido --> [*]
+
+@enduml

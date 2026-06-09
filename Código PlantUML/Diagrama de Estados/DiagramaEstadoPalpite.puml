@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+title Diagrama de Estados - Palpite
+
+[*] --> Criado : Participante registra palpite
+
+Criado --> Alterado : Participante altera palpite
+
+Alterado --> Alterado : Nova alteração
+
+Criado --> Bloqueado : Início da partida
+
+Alterado --> Bloqueado : Início da partida
+
+Bloqueado --> Avaliado : Resultado registrado
+
+Avaliado --> [*]
+
+@enduml

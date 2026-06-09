@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+
+title Diagrama de Estados - Bolão
+
+
+[*] --> Criado : Administrador cria bolão
+
+Criado --> AbertoParaInscricoes : Publicado
+
+AbertoParaInscricoes --> EmAndamento : Primeiro jogo iniciado
+
+AbertoParaInscricoes --> Cancelado : Administrador cancela
+
+EmAndamento --> Encerrado : Último jogo finalizado
+
+Encerrado --> Arquivado : Histórico
+
+Arquivado --> [*]
+
+Cancelado --> [*]
+
+@enduml

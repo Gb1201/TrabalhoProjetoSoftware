@@ -1,0 +1,180 @@
+@startuml
+
+title Diagrama de Classes - Sistema FlaBolão
+
+skinparam classAttributeIconSize 0
+
+' ─────────────────────────────────────────
+' Enums
+' ─────────────────────────────────────────
+
+enum StatusJogo {
+  AGENDADO
+  EM_ANDAMENTO
+  ENCERRADO
+  CANCELADO
+}
+
+enum ClassificacaoPalpite {
+  PLACAR_EXATO
+  GOLS_FLAMENGO
+  SEM_ACERTO
+}
+
+enum TipoNotificacao {
+  PLACAR_EXATO
+  ACERTO_PARCIAL
+  SEM_PONTUACAO
+}
+
+enum Competicao {
+  BRASILEIRAO
+  COPA_DO_BRASIL
+  LIBERTADORES
+  CARIOCA
+  AMISTOSO
+}
+
+' ─────────────────────────────────────────
+' Usuários
+' ─────────────────────────────────────────
+
+abstract class Usuario {
+  - id: Long
+  - nome: String
+  - email: String
+  - senha: String
+  - dataCadastro: LocalDate
+  - ativo: Boolean
+}
+
+class Participante {
+  - pontuacaoTotal: Integer
+  - totalAcertosExatos: Integer
+}
+
+class Administrador {
+  - nivel: String
+}
+
+' ─────────────────────────────────────────
+' Bolão
+' ─────────────────────────────────────────
+
+class Bolao {
+  - id: Long
+  - nome: String
+  - descricao: String
+  - dataCriacao: LocalDate
+}
+
+' ─────────────────────────────────────────
+' Jogo
+' ─────────────────────────────────────────
+
+class Jogo {
+  - id: Long
+  - adversario: String
+  - dataHora: LocalDateTime
+  - local: String
+  - status: StatusJogo
+  - competicao: Competicao
+}
+
+' ─────────────────────────────────────────
+' Resultado Oficial da Partida
+' ─────────────────────────────────────────
+
+class Resultado {
+  - id: Long
+  - golsFlamengo: Integer
+  - golsAdversario: Integer
+  - dataRegistro: LocalDateTime
+}
+
+' ─────────────────────────────────────────
+' Palpite
+' ─────────────────────────────────────────
+
+class Palpite {
+  - id: Long
+  - golsFlamengo: Integer
+  - golsAdversario: Integer
+  - dataRegistro: LocalDateTime
+  - classificacao: ClassificacaoPalpite
+  - pontos: Integer
+}
+
+' ─────────────────────────────────────────
+' Ranking
+' ─────────────────────────────────────────
+
+class Ranking {
+  - id: Long
+  - dataAtualizacao: LocalDateTime
+}
+
+' ─────────────────────────────────────────
+' Notificação
+' ─────────────────────────────────────────
+
+class Notificacao {
+  - id: Long
+  - mensagem: String
+  - tipo: TipoNotificacao
+  - dataEnvio: LocalDateTime
+  - lida: Boolean
+}
+
+' ─────────────────────────────────────────
+' Herança
+' ─────────────────────────────────────────
+
+Usuario <|-- Participante
+Usuario <|-- Administrador
+
+' ─────────────────────────────────────────
+' Composição
+' ─────────────────────────────────────────
+
+Bolao *-- "1..*" Jogo : contém
+
+Jogo *-- "0..1" Resultado : possui
+
+Bolao *-- "1" Ranking : possui
+
+' ─────────────────────────────────────────
+' Agregações
+' ─────────────────────────────────────────
+
+Bolao o-- "1..*" Participante : participantes
+
+Participante o-- "0..*" Palpite : realiza
+
+Jogo o-- "0..*" Palpite : recebe
+
+Ranking o-- "1..*" Participante : classifica
+
+' ─────────────────────────────────────────
+' Associações
+' ─────────────────────────────────────────
+
+Administrador "1" --> "0..*" Jogo : cadastra/edita
+
+Administrador "1" --> "0..*" Resultado : registra
+
+Participante "1" --> "0..*" Notificacao : recebe
+
+' ─────────────────────────────────────────
+' Dependências com Enums
+' ─────────────────────────────────────────
+
+Jogo --> StatusJogo
+
+Jogo --> Competicao
+
+Palpite --> ClassificacaoPalpite
+
+Notificacao --> TipoNotificacao
+
+@enduml

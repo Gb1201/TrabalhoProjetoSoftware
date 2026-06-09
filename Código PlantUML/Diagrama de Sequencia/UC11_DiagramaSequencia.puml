@@ -1,0 +1,79 @@
+@startuml
+
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+title UC-11 - Registrar Resultado da Partida
+
+actor "Administrador" as A
+participant "Sistema" as S
+database "Banco de Dados" as BD
+actor "Participante" as P
+
+A -> S : Realiza login (UC-02)
+activate S
+
+S --> A : Exibe jogos encerrados
+
+A -> S : Seleciona jogo encerrado
+A -> S : Informa placar oficial
+
+S -> BD : Salvar resultado da partida
+activate BD
+
+BD --> S : Confirma gravação
+
+deactivate BD
+
+S -> BD : Buscar palpites do jogo
+activate BD
+
+BD --> S : Retorna lista de palpites
+
+deactivate BD
+
+loop Para cada palpite
+
+    S -> S : Comparar palpite\ncom resultado oficial
+
+    alt Acertou placar exato
+
+        S -> S : Atribuir 3 pontos
+
+    else Acertou apenas gols do Flamengo
+
+        S -> S : Atribuir 1 ponto
+
+    else Não acertou nenhuma condição
+
+        S -> S : Atribuir 0 pontos
+
+    end
+
+    S -> BD : Atualizar pontuação do participante
+    activate BD
+
+    BD --> S : Confirma atualização
+
+    deactivate BD
+
+end
+
+S -> BD : Recalcular ranking
+activate BD
+
+BD --> S : Ranking atualizado
+
+deactivate BD
+
+S --> A : Exibe confirmação da atualização
+
+loop Para cada participante do jogo
+
+    S -> P : Envia notificação\ncom pontuação obtida
+
+end
+
+deactivate S
+
+@enduml

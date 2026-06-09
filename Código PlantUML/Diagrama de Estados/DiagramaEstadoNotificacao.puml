@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+title Diagrama de Estados - Notificação
+
+
+
+[*] --> Criada : Sistema gera notificação
+
+Criada --> Enviando : Inicia envio
+
+Enviando --> Enviada : Envio realizado
+
+Enviando --> FalhaEnvio : Erro no envio
+
+FalhaEnvio --> Enviando : Nova tentativa
+
+Enviada --> Visualizada : Participante acessa notificação
+
+Visualizada --> Lida : Participante marca como lida
+
+Lida --> Arquivada : Histórico
+
+Arquivada --> [*]
+
+@enduml

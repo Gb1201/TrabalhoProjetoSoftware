@@ -1,0 +1,52 @@
+@startuml
+
+title Diagrama de Implantação - Sistema FlaBolão
+
+skinparam nodeStyle uml2
+
+
+
+node "Dispositivo do Usuário" {
+
+  node "Navegador Web" {
+
+    artifact "React App\n(SPA)" as ReactApp
+
+  }
+
+}
+
+
+node "Servidor de Aplicação" {
+
+  node "JVM (Java 17)" {
+
+    artifact "flabolao.jar\n(Spring Boot)" as SpringApp
+
+  }
+
+}
+
+
+node "Servidor de Banco de Dados" {
+
+  database "flabolao_db\n(PostgreSQL 15)" as DB
+
+}
+
+
+
+cloud "Servidor de E-mail" {
+
+  artifact "Serviço SMTP\n(Notificações)" as SMTP
+
+}
+
+
+ReactApp ..> SpringApp : <<HTTPS / REST API>>
+
+SpringApp ..> DB : <<JDBC / PostgreSQL\nporta 5432>>
+
+SpringApp ..> SMTP : <<SMTP\nporta 587>>
+
+@enduml

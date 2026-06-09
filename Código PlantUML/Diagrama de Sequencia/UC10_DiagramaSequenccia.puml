@@ -1,0 +1,36 @@
+@startuml
+
+title UC-10 - Consultar Histórico de Palpites
+
+actor "Participante" as P
+participant "Sistema" as S
+database "Banco de Dados" as BD
+
+P -> S : Solicita histórico de palpites
+activate S
+
+S -> BD : Buscar palpites do participante
+activate BD
+
+BD --> S : Lista de palpites
+deactivate BD
+
+alt Nenhum palpite encontrado
+
+    S --> P : Exibe mensagem
+
+else Histórico encontrado
+
+    S ->> BD : Buscar jogos relacionados
+    activate BD
+
+    BD --> S : Dados dos jogos
+    deactivate BD
+
+    S --> P : Exibe histórico completo
+
+end
+
+deactivate S
+
+@enduml
