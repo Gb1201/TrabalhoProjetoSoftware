@@ -160,14 +160,84 @@ O **FlaBolão** adota uma arquitetura **cliente-servidor em três camadas**, com
 
 Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados abaixo. Consulte o arquivo de documentação completo em `/docs`.
 
-| Diagrama de Arquitetura | Detalhe da Arquitetura |
+#### 📌 Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](Diagramas%20Em%20Imagens/Casos%20de%20Uso/CasoUso.png)
+
+---
+
+#### 🧱 Diagrama de Classes
+
+![Diagrama de Classes](Diagramas%20Em%20Imagens/Diagrama%20de%20Classes/DiagramaClasses.png)
+
+---
+
+#### 🔩 Diagrama de Componentes
+
+![Diagrama de Componentes](Diagramas%20Em%20Imagens/Diagrama%20de%20Componentes/DiagramaComponentes.png)
+
+---
+
+#### 🏗️ Diagrama de Implantação
+
+![Diagrama de Implantação](Diagramas%20Em%20Imagens/Diagrama%20de%20Implantacao/DiagramaImplantacao.png)
+
+---
+
+#### 🔄 Diagrama de Sequência Geral
+
+![Diagrama de Sequência Geral](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/DiagramaSequenciaGeral.png)
+
+<details>
+<summary>Ver diagramas de sequência por caso de uso</summary>
+
+| UC | Diagrama |
 | :---: | :---: |
-| **Visão Geral (Macro)** | **Diagrama de Componentes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema FlaBolão" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes FlaBolão" width="120px" height="120px"> |
-| **Modelo de Dados (DER)** | **Fluxo de Autenticação (UC-02)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama Entidade-Relacionamento FlaBolão" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência Login" width="120px" height="120px"> |
-| **Diagrama de Implantação** | **Diagrama de Classes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Implantação FlaBolão" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Classes FlaBolão" width="120px" height="120px"> |
+| **UC-01 — Cadastrar Participante** | ![UC01](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC1_DiagramaSequencia.png) |
+| **UC-02 — Realizar Login** | ![UC02](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC2_DiagramaSequencia.png) |
+| **UC-04 — Cadastrar Jogo** | ![UC04](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC4_DiagramaSequencia.png) |
+| **UC-08 — Registrar Palpite** | ![UC08](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC8_DiagramaSequencia.png) |
+| **UC-10 — Consultar Histórico** | ![UC10](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC10_DiagramaSequenccia.png) |
+| **UC-11 — Registrar Resultado** | ![UC11](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC11_DiagramaSequencia.png) |
+| **UC-13 — Consultar Ranking** | ![UC13](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC13_DiagramaSequencia.png) |
+
+</details>
+
+---
+
+#### 🗂️ Diagramas de Comunicação
+
+<details>
+<summary>Ver diagramas de comunicação por caso de uso</summary>
+
+| UC | Diagrama |
+| :---: | :---: |
+| **UC-02 — Realizar Login** | ![UC02](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC2_DiagramaComunicacao.png) |
+| **UC-03 — Gerenciar Participantes** | ![UC03](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC3_DiagramaComunicao.png) |
+| **UC-04 — Cadastrar Jogo** | ![UC04](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC4_DiagramaComunicacao.png) |
+| **UC-08 — Registrar Palpite** | ![UC08](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC8_DiagramaComunicacao.png) |
+| **UC-11 — Registrar Resultado** | ![UC11](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC11_DiagramaComunicacao.png) |
+| **UC-13 — Consultar Ranking** | ![UC13](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC13_DiagramaComunicao.png) |
+| **UC-14 — Visualizar Notificações** | ![UC14](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC14_DiagramaComunicao.png) |
+
+</details>
+
+---
+
+#### 🔁 Diagramas de Estados
+
+<details>
+<summary>Ver diagramas de estados</summary>
+
+| Entidade | Diagrama |
+| :---: | :---: |
+| **Jogo** | ![Estado Jogo](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoJogo.png) |
+| **Bolão** | ![Estado Bolão](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoBolao.png) |
+| **Participante** | ![Estado Participante](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadosParticipante.png) |
+| **Palpite** | ![Estado Palpite](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoPalpite.png) |
+| **Notificação** | ![Estado Notificação](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoNotificacao.png) |
+
+</details>
 
 ---
 
@@ -564,100 +634,7 @@ Descreva o propósito das pastas principais.
 
 ---
 
-## 🎥 Demonstração
 
-Use GIFs e prints para mostrar o projeto em ação.  
-
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
-
-### 📱 Aplicativo Mobile
-
-- GIF de demonstração (exemplo de fluxo de usuário):  
-
-| Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
-|----------------|----------------|----------------|----------------|
-| <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
-| _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Tela Inicial (Home)** | **Tela de Perfil / Settings** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-| **Tela de Cadastro** | **Tela de Lista / Detalhes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
-
-### 🌐 Aplicação Web
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Página de Login** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
-
-### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
-
-Caso o projeto seja focado em serviços de Back-end (API, microserviço, CLI), utilize esta seção para demonstrar a interação com o sistema e a resposta esperada.
-
-#### 1. Demonstração da API (Exemplo com cURL)
-
-Mostra uma chamada simples para um endpoint da API (ex: GET de listagem).
-
-```bash
-# Chama o endpoint de listagem de usuários com o token de autenticação
-curl -X GET 'http://localhost:3000/api/v1/users' \
-     -H 'Authorization: Bearer <seu-jwt-token>'
-```
-
-**Saída Esperada:**
-```json
-{
-  "total": 2,
-  "users": [
-    {
-      "id": "1a2b3c",
-      "name": "Prof. Aramuni",
-      "email": "contato@exemplo.com",
-      "status": "active"
-    },
-    {
-      "id": "4d5e6f",
-      "name": "Colaborador Teste",
-      "email": "teste@exemplo.com",
-      "status": "inactive"
-    }
-  ]
-}
-```
-
----
-
-#### 2. Demonstração de Execução de CLI/Script
-
-Mostra como executar uma ferramenta de linha de comando ou um script de manutenção do projeto (ex: rodar migrações ou um job agendado).
-
-```bash
-# Executa a ferramenta de validação de Schema
-npm run cli validate:schema --target=production
-```
-
-**Saída Esperada:**
-```text
-[INFO] Iniciando validação do banco de dados...
-[SUCCESS] 15/15 tabelas verificadas.
-[WARNING] Coluna 'descricao' na tabela 'produtos' é nullable.
-[SUCCESS] Validação concluída. Nenhum erro crítico encontrado.
-Tempo de execução: 1.25s
-```
-
----
 
 ## 🧪 Testes
 
@@ -697,8 +674,8 @@ Liste os principais contribuidores. Você pode usar links para seus perfis.
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
-| Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
-| Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| Gabriel Santos  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/Gb1201"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/gabriel-coelho-765315350/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:gabrielsscoelho2004@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+
 
 > [!TIP]
 > 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
