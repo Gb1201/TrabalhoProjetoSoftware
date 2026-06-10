@@ -7,22 +7,22 @@
 
 ---
 
-# 🏷️ Nome do Projeto 👨‍💻
+# ⚽ FlaBolão 🔴⚫
 
 > [!NOTE]
-> Breve descrição do projeto. **Foque no principal valor/benefício.**  
-> Crie uma **logo** para o projeto que represente a aplicação em questão.
+> Sistema de bolão online para jogos do Flamengo, onde participantes registram palpites, acompanham o ranking e recebem notificações de pontuação após cada partida.  
+> Desenvolvido como projeto acadêmico da disciplina **Projeto de Software**.
 
 <table>
   <tr>
     <td width="800px">
       <div align="justify">
-        Este <b>README.md</b> apresenta um template organizado, ideal para servir como referência acadêmica e profissional em projetos de desenvolvimento, desde trabalhos da faculdade até projetos desenvolvidos para etapas técnicas de processos seletivos. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
+        O <b>FlaBolão</b> é um sistema web de bolão esportivo voltado para os jogos do <b>Flamengo</b>. Participantes podem se cadastrar, realizar login, visualizar jogos disponíveis, registrar e alterar palpites antes do início das partidas, consultar o ranking geral e receber notificações automáticas com a pontuação obtida após cada resultado. O sistema conta com um painel administrativo que permite ao <b>administrador</b> gerenciar participantes, bolões e jogos, registrar resultados oficiais e manter a classificação atualizada. A pontuação segue a seguinte lógica: <b>3 pontos</b> para placar exato, <b>1 ponto</b> para acerto apenas dos gols do Flamengo e <b>0 pontos</b> para nenhum acerto.
       </div>
     </td>
     <td>
       <div>
-        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
+        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo FlaBolão" width="120px"/>
       </div>
     </td>
   </tr> 
@@ -34,14 +34,12 @@
 
 ### Exemplos de badges básicos:
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/joaopauloaramuni/joaopauloaramuni/main.yml?branch=main)](https://github.com/joaopauloaramuni/joaopauloaramuni/actions/workflows/main.yml)
-[![Test Coverage](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/branch/main/graph/badge.svg)](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue)](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/releases)
-[![Licença](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)](#licença)
+[![Versão](https://img.shields.io/badge/Versão-v3.2-blue)](https://github.com/GabrielSCoelho/flabolao/releases)
+[![Licença](https://img.shields.io/badge/Licença-MIT-green)](#licença)
 
-### Outros exemplos de badges:
+### Badges do projeto:
 
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/releases) ![React](https://img.shields.io/badge/React-19.1.1-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-7.1.2-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![Java](https://img.shields.io/badge/Java-17-007ec6?style=for-the-badge&logo=openjdk&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-3.9.9-007ec6?style=for-the-badge&logo=apachemaven&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-007ec6?style=for-the-badge&logo=springboot&logoColor=white) ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-3.1.1-007ec6?style=for-the-badge&logo=thymeleaf&logoColor=white) ![GitHub repo size](https://img.shields.io/github/repo-size/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=files) ![GitHub directory file count](https://img.shields.io/github/directory-file-count/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=files) ![GitHub stars](https://img.shields.io/github/stars/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=python) ![GitHub license](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&color=007ec6&logo=gitkraken) ![GitHub last commit](https://img.shields.io/github/last-commit/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=clockify) ![Vercel](https://vercelbadge.vercel.app/api/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2Fjoaopauloaramuni%2Flaboratorio-de-desenvolvimento-de-software&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
+[![Versão](https://img.shields.io/badge/Versão-v3.2-blue?style=for-the-badge)](https://github.com/GabrielSCoelho/flabolao/releases) ![React](https://img.shields.io/badge/React-JSX-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-latest-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![Java](https://img.shields.io/badge/Java-17-007ec6?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-007ec6?style=for-the-badge&logo=springboot&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-007ec6?style=for-the-badge&logo=postgresql&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring_Security-JWT-007ec6?style=for-the-badge&logo=springsecurity&logoColor=white)
 
 ---
 
@@ -93,100 +91,153 @@
 ---
 
 ## 📝 Sobre o Projeto
-Nesta seção, descreva de forma clara e objetiva **o propósito do seu projeto**, explicando:
 
-- **Por que ele existe** — qual motivação levou à sua criação.  
-- **Qual problema ele resolve** — que dor, necessidade ou oportunidade ele atende.  
-- **Qual o contexto** — acadêmico, profissional, pessoal, experimental, etc.  
-- **Onde ele pode ser utilizado** — cenários reais ou simulados.  
+O **FlaBolão** nasceu como projeto acadêmico da disciplina **Projeto de Software** (PUC Minas), com o objetivo de aplicar na prática os conceitos de engenharia de software, modelagem UML e desenvolvimento full-stack.
 
-Procure responder perguntas como:
-- *Qual foi a ideia inicial do projeto?*
-- *O que ele entrega de valor ao usuário?*
-- *Por que alguém utilizaria ou contribuiria com esse projeto?*
-- *O que o torna relevante ou interessante?*
+- **Por que ele existe:** Para permitir que torcedores do Flamengo compitam entre si fazendo palpites nos resultados das partidas.
+- **Qual problema ele resolve:** Centraliza o gerenciamento de bolões esportivos, eliminando planilhas manuais e controle informal de palpites.
+- **Contexto:** Projeto acadêmico com stack real (React + Spring Boot + PostgreSQL).
+- **Onde pode ser utilizado:** Grupos de amigos, torcidas organizadas ou qualquer contexto onde se queira um bolão de futebol organizado e automatizado.
 
-Escreva de forma objetiva, mas completa, para que qualquer pessoa entenda rapidamente **o que é** e **por que importa**.
-
-> [!NOTE]
-> Esta seção segue boas práticas de documentação profissional e deve ser ajustada conforme o tipo e o objetivo do seu projeto.
+O sistema calcula pontuação automaticamente após o registro do resultado oficial: **3 pontos** para placar exato, **1 ponto** para acerto dos gols do Flamengo e **0 pontos** para sem acerto. O ranking é atualizado em tempo real e os participantes recebem notificações com sua pontuação obtida.
 
 ---
 
 ## ✨ Funcionalidades Principais
-Liste as funcionalidades de forma clara e objetiva.
 
-- 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
-- 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
-- ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens, Posts).
-- 📊 **Relatórios Exportáveis:** Exportação de dados em PDF, CSV ou Excel.
-- 🌐 **Internacionalização (i18n):** Suporte a múltiplos idiomas.
-- 🧵 **Logs e Monitoramento:** Registro detalhado de atividades e análise de desempenho.
-- 🔄 **Integração com APIs Externas:** Conexão com serviços de terceiros (pagamentos, mapas, autenticação, etc.).
-- 📨 **Sistema de Notificações:** Envio de alertas por e-mail, push ou notificações internas.
+- 🔐 **Cadastro e Login:** Registro de participantes com validação de e-mail único e autenticação via JWT.
+- ⚽ **Gestão de Jogos:** Administrador cadastra, edita e cancela jogos do Flamengo com adversário, data/hora, local e competição.
+- 🎯 **Registro de Palpites:** Participantes registram e alteram palpites (gols Flamengo x adversário) enquanto a partida não iniciou.
+- 🏆 **Ranking Automático:** Pontuação calculada automaticamente após registro do resultado oficial (3pts placar exato / 1pt gols Flamengo / 0pt sem acerto).
+- 🔔 **Notificações:** Participantes recebem notificação por e-mail (SMTP) com pontuação obtida após avaliação do palpite.
+- 📜 **Histórico de Palpites:** Consulta de todos os palpites realizados com resultado e pontuação.
+- 👥 **Gestão de Participantes:** Administrador visualiza, edita e desativa participantes.
+- 🗂️ **Gerenciamento de Bolões:** Administrador cria e administra bolões com múltiplos jogos.
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construção deste projeto. Recomenda-se o uso das versões listadas (ou superiores) para garantir a compatibilidade.
+As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construção deste projeto.
 
 ### 💻 Front-end
 
-* **Framework/Biblioteca:** [Ex: React v18, Vue.js v3, Angular v17]
-* **Linguagem/Superset:** [Ex: TypeScript, JavaScript ES6+]
-* **Estilização:** [Ex: Tailwind CSS, Sass, Styled Components, Material UI]
-* **Gerenciamento de Estado:** [Ex: Redux Toolkit, Zustand, Context API]
-* **Build Tool:** [Ex: Vite, Webpack]
+* **Framework/Biblioteca:** React (JSX)
+* **Build Tool:** Vite
+* **Linguagem:** JavaScript (JSX)
+* **Comunicação:** REST API via fetch/axios
+* **Gerenciamento de Estado:** Context API / React Hooks
 
 ### 🖥️ Back-end
 
-* **Linguagem/Runtime:** [Ex: Java 17 (JDK), Node.js v20, Python 3.11]
-* **Framework:** [Ex: Spring Boot 3.x, NestJS, Express, Django]
-* **Banco de Dados:** [Ex: PostgreSQL, MySQL, MongoDB]
-* **ORM / Query Builder:** [Ex: Hibernate/JPA, Prisma, TypeORM]
-* **Autenticação:** [Ex: JWT, OAuth2, Spring Security]
-
-### 📱 Mobile (Opcional)
-
-* **Framework:** [Ex: React Native, Flutter, Kotlin Multiplatform]
-* **Ferramentas:** [Ex: Expo, Android Studio, Xcode]
+* **Linguagem/Runtime:** Java 17 (JDK)
+* **Framework:** Spring Boot 3.x
+* **Banco de Dados:** PostgreSQL 15
+* **ORM:** JPA / Hibernate
+* **Autenticação:** Spring Security + JWT
+* **Notificações:** Serviço SMTP (JavaMailSender)
+* **Servidor:** Porta 8080 (Spring Boot Embedded Tomcat)
 
 ### ⚙️ Infraestrutura & DevOps
 
-* **Containerização:** [Ex: Docker, Docker Compose]
-* **Orquestração:** [Ex: Kubernetes (K8s)]
-* **Cloud:** [Ex: AWS (EC2, RDS, S3), Vercel, Heroku, Google Cloud]
-* **CI/CD:** [Ex: GitHub Actions, Jenkins, SonarQube]
+* **Containerização:** Docker / Docker Compose
+* **Banco de Dados (porta):** PostgreSQL na porta 5432
+* **SMTP (porta):** Serviço de e-mail na porta 587
 
 ---
 
 ## 🏗 Arquitetura
 
-Descreva aqui a **arquitetura completa do sistema**, explicando como as camadas, módulos e componentes foram organizados. Informe também **por que** essa arquitetura foi escolhida e **quais problemas ela ajuda a resolver**.
+O **FlaBolão** adota uma arquitetura **cliente-servidor em três camadas**, com separação clara entre Front-end (SPA React), Back-end (API REST Spring Boot) e Banco de Dados (PostgreSQL).
 
-Você pode incluir:
-
-- **Visão geral da arquitetura** (ex.: camadas, módulos, microsserviços, monólito modular, hexagonal, MVC etc.)
-- **Principais componentes** e o papel de cada um
-- **Padrões de design adotados** (ex.: Repository, Service Layer, DTOs, Factory, Observer)
-- **Fluxo de dados** entre as partes do sistema
-- **Tecnologias utilizadas em cada camada**
-- **Decisões arquiteturais importantes**
-- **Trade-offs** ou limitações relevantes
+- **Visão geral:** Front-end React (SPA) → HTTPS/REST API → Spring Boot (JVM/Java 17) → JPA/JDBC → PostgreSQL 15
+- **Principais componentes:** `AuthController`, `JogoController`, `PalpiteController`, `ResultadoController`, `RankingController`, `NotificacaoController`, `ParticipanteController` e seus respectivos `Service` e `Repository`.
+- **Padrões de design:** Repository Pattern, Service Layer, DTOs, Spring Security com JWT, Observer implícito via Módulo de Notificações.
+- **Fluxo de dados:** Participante acessa o Front-end React → chamadas REST para a API Spring Boot → Spring Boot valida via JWT → persiste/consulta no PostgreSQL → retorna JSON ao cliente.
+- **Notificações:** Ao registrar o resultado oficial, o sistema calcula pontuações, atualiza o ranking e dispara e-mails via SMTP (porta 587) para cada participante do jogo.
 
 ### Exemplos de diagramas
 
-Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados lado a lado.
+Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados abaixo. Consulte o arquivo de documentação completo em `/docs`.
 
-| Diagrama de Arquitetura | Detalhe da Arquitetura |
+#### 📌 Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](Diagramas%20Em%20Imagens/Casos%20de%20Uso/CasoUso.png)
+
+---
+
+#### 🧱 Diagrama de Classes
+
+![Diagrama de Classes](Diagramas%20Em%20Imagens/Diagrama%20de%20Classes/DiagramaClasses.png)
+
+---
+
+#### 🔩 Diagrama de Componentes
+
+![Diagrama de Componentes](Diagramas%20Em%20Imagens/Diagrama%20de%20Componentes/DiagramaComponentes.png)
+
+---
+
+#### 🏗️ Diagrama de Implantação
+
+![Diagrama de Implantação](Diagramas%20Em%20Imagens/Diagrama%20de%20Implantacao/DiagramaImplantacao.png)
+
+---
+
+#### 🔄 Diagrama de Sequência Geral
+
+![Diagrama de Sequência Geral](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/DiagramaSequenciaGeral.png)
+
+<details>
+<summary>Ver diagramas de sequência por caso de uso</summary>
+
+| UC | Diagrama |
 | :---: | :---: |
-| **Visão Geral (Macro)** | **Camada de Serviço (Micro)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
-| **Modelo de Dados (Entidades)** | **Fluxo de Autenticação** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px"> |
-| **Infraestrutura (Cloud)** | **API Gateway (Rotas)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px"> |
+| **UC-01 — Cadastrar Participante** | ![UC01](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC1_DiagramaSequencia.png) |
+| **UC-02 — Realizar Login** | ![UC02](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC2_DiagramaSequencia.png) |
+| **UC-04 — Cadastrar Jogo** | ![UC04](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC4_DiagramaSequencia.png) |
+| **UC-08 — Registrar Palpite** | ![UC08](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC8_DiagramaSequencia.png) |
+| **UC-10 — Consultar Histórico** | ![UC10](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC10_DiagramaSequenccia.png) |
+| **UC-11 — Registrar Resultado** | ![UC11](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC11_DiagramaSequencia.png) |
+| **UC-13 — Consultar Ranking** | ![UC13](Diagramas%20Em%20Imagens/Diagrama%20de%20Sequencia/UC13_DiagramaSequencia.png) |
+
+</details>
+
+---
+
+#### 🗂️ Diagramas de Comunicação
+
+<details>
+<summary>Ver diagramas de comunicação por caso de uso</summary>
+
+| UC | Diagrama |
+| :---: | :---: |
+| **UC-02 — Realizar Login** | ![UC02](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC2_DiagramaComunicacao.png) |
+| **UC-03 — Gerenciar Participantes** | ![UC03](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC3_DiagramaComunicao.png) |
+| **UC-04 — Cadastrar Jogo** | ![UC04](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC4_DiagramaComunicacao.png) |
+| **UC-08 — Registrar Palpite** | ![UC08](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC8_DiagramaComunicacao.png) |
+| **UC-11 — Registrar Resultado** | ![UC11](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC11_DiagramaComunicacao.png) |
+| **UC-13 — Consultar Ranking** | ![UC13](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC13_DiagramaComunicao.png) |
+| **UC-14 — Visualizar Notificações** | ![UC14](Diagramas%20Em%20Imagens/Diagrama%20de%20Comunicacao/UC14_DiagramaComunicao.png) |
+
+</details>
+
+---
+
+#### 🔁 Diagramas de Estados
+
+<details>
+<summary>Ver diagramas de estados</summary>
+
+| Entidade | Diagrama |
+| :---: | :---: |
+| **Jogo** | ![Estado Jogo](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoJogo.png) |
+| **Bolão** | ![Estado Bolão](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoBolao.png) |
+| **Participante** | ![Estado Participante](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadosParticipante.png) |
+| **Palpite** | ![Estado Palpite](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoPalpite.png) |
+| **Notificação** | ![Estado Notificação](Diagramas%20Em%20Imagens/Diagrama%20de%20Estados/DiagramaEstadoNotificacao.png) |
+
+</details>
 
 ---
 
@@ -208,25 +259,27 @@ Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no se
 
 #### 1 Back-end (Spring Boot)
 
-Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
+Configure estas variáveis como **variáveis de ambiente do sistema** ou em `application.properties` / `application.yml`.
 
 | Variável | Descrição | Exemplo |
 | :--- | :--- | :--- |
 | `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
-| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
+| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/flabolao_db` |
 | `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
 | `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
-| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
+| `JWT_SECRET` | Chave secreta para assinatura de tokens JWT. | `chave_super_segura_base64` |
+| `MAIL_HOST` | Host do servidor SMTP para notificações. | `smtp.gmail.com` |
+| `MAIL_PORT` | Porta SMTP. | `587` |
+| `MAIL_USERNAME` | E-mail remetente das notificações. | `flabolao@gmail.com` |
+| `MAIL_PASSWORD` | Senha/App Password do e-mail remetente. | `app_password_aqui` |
 
 #### 2 Front-end (React, Vite)
 
-Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
+Crie um arquivo **`.env`** na raiz da pasta `/frontend` com o prefixo `VITE_` para expor as variáveis ao *bundle* da aplicação.
 
 | Variável | Descrição | Exemplo |
 | :--- | :--- | :--- |
-| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
-| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
-| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
+| `VITE_API_URL` | URL base da API Spring Boot. | `http://localhost:8080/api` |
 
 ---
 
@@ -581,100 +634,7 @@ Descreva o propósito das pastas principais.
 
 ---
 
-## 🎥 Demonstração
 
-Use GIFs e prints para mostrar o projeto em ação.  
-
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
-
-### 📱 Aplicativo Mobile
-
-- GIF de demonstração (exemplo de fluxo de usuário):  
-
-| Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
-|----------------|----------------|----------------|----------------|
-| <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
-| _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Tela Inicial (Home)** | **Tela de Perfil / Settings** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-| **Tela de Cadastro** | **Tela de Lista / Detalhes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
-
-### 🌐 Aplicação Web
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Página de Login** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
-
-### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
-
-Caso o projeto seja focado em serviços de Back-end (API, microserviço, CLI), utilize esta seção para demonstrar a interação com o sistema e a resposta esperada.
-
-#### 1. Demonstração da API (Exemplo com cURL)
-
-Mostra uma chamada simples para um endpoint da API (ex: GET de listagem).
-
-```bash
-# Chama o endpoint de listagem de usuários com o token de autenticação
-curl -X GET 'http://localhost:3000/api/v1/users' \
-     -H 'Authorization: Bearer <seu-jwt-token>'
-```
-
-**Saída Esperada:**
-```json
-{
-  "total": 2,
-  "users": [
-    {
-      "id": "1a2b3c",
-      "name": "Prof. Aramuni",
-      "email": "contato@exemplo.com",
-      "status": "active"
-    },
-    {
-      "id": "4d5e6f",
-      "name": "Colaborador Teste",
-      "email": "teste@exemplo.com",
-      "status": "inactive"
-    }
-  ]
-}
-```
-
----
-
-#### 2. Demonstração de Execução de CLI/Script
-
-Mostra como executar uma ferramenta de linha de comando ou um script de manutenção do projeto (ex: rodar migrações ou um job agendado).
-
-```bash
-# Executa a ferramenta de validação de Schema
-npm run cli validate:schema --target=production
-```
-
-**Saída Esperada:**
-```text
-[INFO] Iniciando validação do banco de dados...
-[SUCCESS] 15/15 tabelas verificadas.
-[WARNING] Coluna 'descricao' na tabela 'produtos' é nullable.
-[SUCCESS] Validação concluída. Nenhum erro crítico encontrado.
-Tempo de execução: 1.25s
-```
-
----
 
 ## 🧪 Testes
 
@@ -714,8 +674,8 @@ Liste os principais contribuidores. Você pode usar links para seus perfis.
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
-| Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
-| Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| Gabriel Santos  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/Gb1201"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/gabriel-coelho-765315350/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:gabrielsscoelho2004@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+
 
 > [!TIP]
 > 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
